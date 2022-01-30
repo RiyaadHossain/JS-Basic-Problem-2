@@ -68,17 +68,32 @@ console.log(minOfDay);
 
 // 4. Write a fuction which takes a number and show the factorial of the number. 
 
+// First Way:
 function getFactorial(num){
      
     let fac = 1;
     for(let i = 1; i <= num; i++){
         fac = fac * i;
-        console.log(`${num} * ${i} = ${fac}`);
     }
     return `Total Sum is: ${fac}`;
 }
 
 console.log(getFactorial(7));
+
+// Second Way:
+function getFactorial2(num){
+    let fac = 1;
+    let i = num;
+    while(i >= 1){
+        fac = fac * i;
+        i--;
+    }
+    return fac;
+}
+
+
+let facOfEight = getFactorial2(8);
+console.log(facOfEight);
 
 
 
@@ -90,3 +105,7 @@ function inchToFeet(inch){
 }
 
 console.log(inchToFeet(12));
+
+
+
+
